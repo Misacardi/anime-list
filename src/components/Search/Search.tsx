@@ -14,7 +14,6 @@ export const Search = () => {
       `https://kitsu.io/api/edge/anime?filter[text]=${input}}`,
     );
     setSearchAnime(data.data);
-    console.log(data);
   };
 
   useEffect(() => {

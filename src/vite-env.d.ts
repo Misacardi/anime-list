@@ -11,6 +11,8 @@ interface PosterImage {
 interface Favorite {
   parentId: number;
   id: number;
+  title: string;
+  img: string;
 }
 
 interface Ititles {

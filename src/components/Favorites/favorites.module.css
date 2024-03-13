@@ -1,0 +1,47 @@
+.favorites {
+  min-height: 100vh;
+  background-color: #191919;
+  border-radius: 20px;
+}
+.title {
+  padding: 20px;
+  text-align: center;
+}
+.animeTitle {
+  font-size: 20px;
+}
+
+.item {
+  transition: 0.2s ease-in-out;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.list {
+  margin: 20px;
+}
+
+.item:hover {
+  background-color: #1e1e1f;
+}
+
+.item img {
+  width: 80px;
+}
+
+.like {
+  cursor: pointer;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+}

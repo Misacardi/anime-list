@@ -24,11 +24,13 @@ export const Home = () => {
 
   const addFavorite = async (item: AnimeInfo, i: number) => {
     try {
+      changeFavoriteBool(item, i);
       if (!item.favorite) {
         await axios.post('https://e971a4c5e7751391.mokky.dev/favorites', {
           parentId: item.id,
+          title: item.attributes.canonicalTitle,
+          img: item.attributes.posterImage.tiny,
         });
-        changeFavoriteBool(item, i);
 
         fetchFavorites();
       } else {

@@ -8,7 +8,7 @@ import { FC } from 'react';
 interface CardList {
   list: AnimeInfo[];
   addFavorite: (e: AnimeInfo, i: number) => void;
-  loadMore?: () => void;
+  loadMore: () => void;
   loading: boolean;
 }
 
