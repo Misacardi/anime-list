@@ -1,0 +1,30 @@
+.title {
+  text-align: center;
+  text-wrap: nowrap;
+  background-color: #ffffff;
+  color: black;
+  padding: 5px;
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.like {
+  top: 0;
+  position: absolute;
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 12px;
+  }
+}

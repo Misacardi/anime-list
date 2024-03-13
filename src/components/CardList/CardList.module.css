@@ -1,0 +1,35 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #191919;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.title {
+  padding: 20px;
+  text-align: center;
+  font-size: 30px;
+}
+
+@media (max-width: 700px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}

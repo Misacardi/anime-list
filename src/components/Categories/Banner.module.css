@@ -1,0 +1,39 @@
+.parent {
+  display: flex;
+  gap: 20px;
+  height: 400px;
+  width: 100%;
+}
+
+.categories {
+  width: 24%;
+  background-color: #191919;
+  padding: 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.item {
+  margin-top: 5px;
+  color: #484f55;
+  font-size: 16px;
+}
+
+/* banner */
+.banner {
+  border-radius: 20px;
+  background-color: #191919;
+  padding: 20px;
+  width: 100%;
+}

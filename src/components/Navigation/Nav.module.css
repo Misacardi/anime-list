@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.champions {
+  font-weight: bold;
+  font-size: 20px;
+}
