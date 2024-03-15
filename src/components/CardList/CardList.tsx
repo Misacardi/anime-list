@@ -23,6 +23,7 @@ const CardList: FC<CardList> = ({ list, addFavorite, loading, loadMore }) => {
               <Card
                 title={e.attributes.canonicalTitle}
                 img={e.attributes.posterImage.medium}
+                id={e.id}
                 key={e.id}
                 addFavorite={() => addFavorite(e, i)}
                 favorite={e.favorite}

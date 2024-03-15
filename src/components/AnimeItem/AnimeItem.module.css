@@ -1,0 +1,57 @@
+.header {
+  background-color: #191919;
+  border-radius: 20px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header img {
+  border-radius: 20px;
+}
+
+.titles {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(79, 83, 82);
+}
+
+.titles h3 {
+  margin-top: 15px;
+  color: white;
+}
+
+.information {
+  padding: 20px;
+}
+.description {
+  margin-top: 20px;
+}
+
+.descTitle {
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.table tr {
+  display: grid;
+  grid-template-columns: 40% 50%;
+  text-transform: uppercase;
+  border-bottom: 1px solid #444040;
+}
+
+.titleInfo {
+  font-weight: bold;
+}

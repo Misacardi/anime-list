@@ -7,6 +7,10 @@
   padding: 6px;
 }
 
+.search:hover {
+  background-color: #353434;
+}
+
 .search img {
   max-width: 40px;
 }

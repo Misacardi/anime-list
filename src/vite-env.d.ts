@@ -15,7 +15,7 @@ interface Favorite {
   img: string;
 }
 
-interface Ititles {
+interface Titles {
   en: string;
   en_jp: string;
   ja_jp: string;
@@ -23,17 +23,27 @@ interface Ititles {
 
 interface Attributes {
   posterImage: PosterImage;
-  titles: Ititles;
+  titles: Titles;
   canonicalTitle: string;
   description?: string;
+  ageRatingGuide: string;
+  subtype: string;
+  status: string;
+  startDate: string;
+  endDate: string;
 }
 
 interface AnimeInfo {
   id: number;
+  type: string;
   attributes: Attributes;
   favorite?: boolean;
   favoriteId?: number;
 }
 interface AnimeData {
   data: AnimeInfo[];
+}
+
+interface SingleAnime {
+  data: AnimeInfo;
 }

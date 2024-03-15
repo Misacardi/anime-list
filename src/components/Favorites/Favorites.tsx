@@ -4,6 +4,8 @@ import { useHttp } from '../../hooks/http.hook';
 import styles from './favorites.module.css';
 import axios from 'axios';
 import { Spinner } from '../Spinner/spinner';
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../../utils/routes';
 
 export const Favorites = () => {
   const [favList, setFavList] = useState<Favorite[]>([]);
@@ -31,33 +33,35 @@ export const Favorites = () => {
   );
 
   return (
-    <div className={styles.favorites}>
-      <h1 className={styles.title}>Favorites</h1>
-
-      <ul className={styles.list}>
-        <div className={styles.loading}>
-          {!loading ? null : <Spinner />}
-          {favList.length || loading ? null : <>Not Found</>}
-          {Error}
-        </div>
-
-        {favList.map((e: Favorite, i) => {
-          return (
-            <li className={styles.item} key={i}>
-              <div className={styles.info}>
-                <img src={e.img} alt='Anime image' />
-                <div className={styles.animeTitle}>{e.title}</div>
-              </div>
-              <img
-                onClick={() => deleteAnime(e.id)}
-                className={styles.like}
-                src='./star2.svg'
-                alt=''
-              />
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <>
+      <div className={styles.favorites}>
+        <ul className={styles.list}>
+          <h1 className={styles.title}>Favorites</h1>
+          {favList.map((e: Favorite, i) => {
+            return (
+              <li className={styles.item} key={i}>
+                <Link to={ROUTES.ITEM + e.parentId}>
+                  <div className={styles.info}>
+                    <img src={e.img} alt='Anime image' />
+                    <div className={styles.animeTitle}>{e.title}</div>
+                  </div>
+                </Link>
+                <img
+                  onClick={() => deleteAnime(e.id)}
+                  className={styles.like}
+                  src='./star2.svg'
+                  alt='delete like'
+                />
+              </li>
+            );
+          })}
+        </ul>
+        {Error}
+      </div>
+      <div className={styles.loading}>
+        {!loading ? null : <Spinner />}
+        {favList.length || loading || error ? null : <>Not Found</>}
+      </div>
+    </>
   );
 };

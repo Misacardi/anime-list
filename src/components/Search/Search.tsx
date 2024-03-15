@@ -50,7 +50,9 @@ export const Search = () => {
           searchedAnime.map((e) => {
             return (
               <SearchItem
+                resetInput={() => setInput('')}
                 key={e.id}
+                id={e.id}
                 title={e.attributes.canonicalTitle}
                 img={e.attributes.posterImage.tiny}
               />

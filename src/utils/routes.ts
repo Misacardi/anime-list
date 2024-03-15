@@ -1,4 +1,5 @@
 export const ROUTES = {
   HOME: '/',
-  FAVORITES: 'favorites',
+  FAVORITES: '/favorites',
+  ITEM: '/anime/',
 };

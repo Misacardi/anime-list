@@ -1,7 +1,7 @@
 .favorites {
-  min-height: 100vh;
   background-color: #191919;
   border-radius: 20px;
+  padding: 10px;
 }
 .title {
   padding: 20px;
@@ -34,6 +34,7 @@
 }
 
 .item img {
+  border-radius: 20px;
   width: 80px;
 }
 
